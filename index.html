@@ -48,6 +48,49 @@
         height: 60px; /* Reduz a logo em telas menores */
     }
 }
+.card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+    }
+    .modal-content {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        max-width: 90%;
+        width: 500px;
+        animation: fadeIn 0.5s ease-in-out;
+    }
+    .close {
+        float: right;
+        font-size: 28px;
+        cursor: pointer;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 768px) {
+        .modal-content {
+            width: 90%;
+            padding: 15px;
+        }
+    }
 
     </style>
 </head>
@@ -160,194 +203,122 @@
     </div>
 </div>
 
-<style>
-    .card {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .card:hover {
-        transform: scale(1.05);
-        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-    }
-    .modal {
-        display: none;
-        position: fixed;
-        z-index: 1000;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
-        justify-content: center;
-        align-items: center;
-    }
-    .modal-content {
-        background: #fff;
-        padding: 20px;
-        border-radius: 10px;
-        text-align: center;
-        max-width: 90%;
-        width: 500px;
-        animation: fadeIn 0.5s ease-in-out;
-    }
-    .close {
-        float: right;
-        font-size: 28px;
-        cursor: pointer;
-    }
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(-20px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-    @media (max-width: 768px) {
-        .modal-content {
-            width: 90%;
-            padding: 15px;
-        }
-    }
-</style>
-
-<script>
-    function showModal(text) {
-        const modal = document.getElementById('modal');
-        const modalText = document.getElementById('modal-text');
-        modalText.innerHTML = '';
-        modal.style.display = 'flex';
-        typeEffect(text, modalText);
-    }
-    
-    function closeModal() {
-        document.getElementById('modal').style.display = 'none';
-    }
-    
-    function typeEffect(text, element) {
-        let i = 0;
-        function typing() {
-            if (i < text.length) {
-                element.innerHTML += text.charAt(i);
-                i++;
-                setTimeout(typing, 50);
-            }
-        }
-        typing();
-    }
-</script>
 
 
     
 <!-- Seção Itens -->
 <section id="itens" class="section py-5 bg-light">
     <div class="container text-center">
-        <h2 class="mb-4">Nossos Itens</h2>
+        <h2 class="mb-4 fw-bold">Nossos Itens</h2>
         <div class="row">
             <!-- Item 1 -->
-            <div class="col-md-4 col-12 mb-4">
-                <div class="card shadow-sm">
+            <div class="col-md-4 col-sm-6 col-12 mb-4">
+                <div class="card shadow-sm item-card">
                     <img src="pajee.jpg" class="card-img-top img-fluid rounded item-image" alt="Item 1" data-bs-toggle="modal" data-bs-target="#modalItem1">
-                    <div class="card-body">
-                        <h5 class="card-title">Item 1 Paje</h5>
-                        <p class="card-text">Breve descrição do item 1.</p>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Item 1 - Pajé</h5>
+                        <p class="card-text">Uma breve descrição do item.</p>
                     </div>
                 </div>
             </div>
             <!-- Item 2 -->
-            <div class="col-md-4 col-12 mb-4">
-                <div class="card shadow-sm">
+            <div class="col-md-4 col-sm-6 col-12 mb-4">
+                <div class="card shadow-sm item-card">
                     <img src="rainhadabatucada.jpg" class="card-img-top img-fluid rounded item-image" alt="Item 2" data-bs-toggle="modal" data-bs-target="#modalItem2">
-                    <div class="card-body">
-                        <h5 class="card-title">Item 2</h5>
-                        <p class="card-text">Breve descrição do item 2.</p>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Item 2 - Rainha da Batucada</h5>
+                        <p class="card-text">Uma breve descrição do item.</p>
                     </div>
                 </div>
             </div>
             <!-- Item 3 -->
-            <div class="col-md-4 col-12 mb-4">
-                <div class="card shadow-sm">
+            <div class="col-md-4 col-sm-6 col-12 mb-4">
+                <div class="card shadow-sm item-card">
                     <img src="rainhadofolclore.jpg" class="card-img-top img-fluid rounded item-image" alt="Item 3" data-bs-toggle="modal" data-bs-target="#modalItem3">
-                    <div class="card-body">
-                        <h5 class="card-title">Item 3</h5>
-                        <p class="card-text">Breve descrição do item 3.</p>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Item 3 - Rainha do Folclore</h5>
+                        <p class="card-text">Uma breve descrição do item.</p>
                     </div>
                 </div>
             </div>
-            <!-- Item 4 -->
-            <div class="col-md-4 col-12 mb-4">
-                <div class="card shadow-sm">
-                    <img src="ana.jpg" class="card-img-top img-fluid rounded item-image" alt="Item 4" data-bs-toggle="modal" data-bs-target="#modalItem4">
-                    <div class="card-body">
-                        <h5 class="card-title">Item 4</h5>
-                        <p class="card-text">Breve descrição do item 4.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Continue adicionando até o 11º item -->
         </div>
     </div>
 
-    <!-- Modals para os itens -->
+    <!-- Modals dos Itens -->
     <div class="modal fade" id="modalItem1" tabindex="-1" aria-labelledby="modalItem1Label" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalItem1Label">Item 1 - Detalhes</h5>
+                    <h5 class="modal-title fw-bold" id="modalItem1Label">Item 1 - Pajé</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <img src="pajee.jpg" class="img-fluid mb-3" alt="Item 1">
-                    <p>Descrição completa sobre o Item 1.</p>
+                <div class="modal-body text-center">
+                    <img src="pajee.jpg" class="img-fluid rounded mb-3 shadow-sm" alt="Item 1">
+                    <p class="lead">Descrição completa sobre o Item 1.</p>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="modal fade" id="modalItem2" tabindex="-1" aria-labelledby="modalItem2Label" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalItem2Label">Item 2 - Detalhes</h5>
+                    <h5 class="modal-title fw-bold" id="modalItem2Label">Item 2 - Rainha da Batucada</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <img src="rainhadabatucada.jpg" class="img-fluid mb-3" alt="Item 2">
-                    <p>Descrição completa sobre o Item 2.</p>
+                <div class="modal-body text-center">
+                    <img src="rainhadabatucada.jpg" class="img-fluid rounded mb-3 shadow-sm" alt="Item 2">
+                    <p class="lead">Descrição completa sobre o Item 2.</p>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="modal fade" id="modalItem3" tabindex="-1" aria-labelledby="modalItem3Label" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalItem3Label">Item 3 - Detalhes</h5>
+                    <h5 class="modal-title fw-bold" id="modalItem3Label">Item 3 - Rainha do Folclore</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <img src="rainhadofolclore.jpg" class="img-fluid mb-3" alt="Item 3">
-                    <p>Descrição completa sobre o Item 3.</p>
+                <div class="modal-body text-center">
+                    <img src="rainhadofolclore.jpg" class="img-fluid rounded mb-3 shadow-sm" alt="Item 3">
+                    <p class="lead">Descrição completa sobre o Item 3.</p>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="modal fade" id="modalItem4" tabindex="-1" aria-labelledby="modalItem4Label" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalItem4Label">Item 4 - Detalhes</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img src="ana.jpg" class="img-fluid mb-3" alt="Item 4">
-                    <p>Descrição completa sobre o Item 4.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Continue criando modais até o Item 11 -->
 </section>
 
-<!-- Inclua os arquivos do Bootstrap no final do corpo do HTML -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<!-- CSS Customizado -->
+<style>
+    /* Efeito hover nos cards */
+    .item-card {
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+    .item-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Ajustes para responsividade */
+    @media (max-width: 768px) {
+        .modal-dialog {
+            max-width: 90%;
+        }
+    }
+
+    /* Ajustes no modal */
+    .modal-body img {
+        max-height: 400px;
+        width: auto;
+    }
+</style>
+
+<!-- Bootstrap JS (necessário para os modais funcionarem) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 
 
 <!-- Seção Formulário de Contato -->
@@ -380,21 +351,7 @@
 </main>
 
 <!-- JavaScript -->
-<script>
-    function showSection(sectionId) {
-        // Esconde todas as seções
-        let sections = document.querySelectorAll('.section');
-        sections.forEach(section => section.classList.remove('active-section'));
 
-        // Mostra a seção clicada
-        document.getElementById(sectionId).classList.add('active-section');
-    }
-</script>
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
 
 
 
@@ -417,6 +374,12 @@
 
 <!-- Bootstrap Icons (se ainda não estiver incluso no projeto) -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap JS (inclui Popper.js) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 
 <style>
     .footer {
@@ -429,5 +392,46 @@
         color: #b5f7b5 !important; /* Verde claro */
     }
 </style>
+
+<script>
+    function showSection(sectionId) {
+        // Esconde todas as seções
+        let sections = document.querySelectorAll('.section');
+        sections.forEach(section => section.classList.remove('active-section'));
+
+        // Mostra a seção clicada
+        document.getElementById(sectionId).classList.add('active-section');
+    }
+    function showModal(text) {
+        const modal = document.getElementById('modal');
+        const modalText = document.getElementById('modal-text');
+        modalText.innerHTML = '';
+        modal.style.display = 'flex';
+        typeEffect(text, modalText);
+    }
+    
+    function closeModal() {
+        document.getElementById('modal').style.display = 'none';
+    }
+    
+    function typeEffect(text, element) {
+        let i = 0;
+        function typing() {
+            if (i < text.length) {
+                element.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typing, 50);
+            }
+        }
+        typing();
+    }
+</script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+</body>
 
 </html>

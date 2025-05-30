@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Boi Bumbá Garanhão</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .navbar {
+            background-color: #008000; /* Verde forte */
+        }
+        .navbar-brand img {
+            height: 60px; /* Tamanho da logo */
+        }
+        .navbar-nav .nav-link {
+            color: white !important;
+            font-size: 18px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #b5f7b5 !important; /* Verde claro */
+        }
+        .section {
+            display: none; /* Oculta todas as seções inicialmente */
+        }
+        .active-section {
+            display: block; /* Apenas a seção ativa fica visível */
+        }
+        .navbar-brand img {
+    height: 80px; /* Aumentando o tamanho da logo */
+    max-width: 100%; /* Garante que a logo não ultrapasse o container */
+    object-fit: contain; /* Mantém a proporção da imagem */
+}
+
+@media (max-width: 768px) { 
+    .navbar-brand img {
+        height: 60px; /* Reduz a logo em telas menores */
+    }
+}
+
+    </style>
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="Boi-Bumbá Garanhão"> </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" onclick="showSection('historia')">História</a></li>
+                    <li class="nav-item"><a class="nav-link" onclick="showSection('noticias')">Notícias</a></li>
+                    <li class="nav-item"><a class="nav-link" onclick="showSection('itens')">Itens</a></li>
+                    <li class="nav-item"><a class="nav-link" onclick="showSection('contato')">Contato</a></li>
+                    <li class="nav-item"><a class="nav-link" onclick="showSection('tema')">Tema</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="container my-5">
+   <section id="tema" class="section py-5 bg-light text-center">
+    <div class="container">
+        <h2 class="mb-4 text-success">Nosso Tema: Legados - O Futuro é Ancestral</h2>
+        <div class="row justify-content-center mb-4">
+            <div class="col-lg-8 col-md-10">
+                <div class="card shadow-lg rounded-3 overflow-hidden">
+                    <div class="card-body p-0">
+                        <img src="tema.jpg" class="img-fluid" alt="Imagem do Tema Legados: O Futuro é Ancestral">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="lead">
+            O tema "Legados: O Futuro é Ancestral" para o ano de 2025 do Boi Bumbá Garanhão é uma profunda reverência às raízes e à sabedoria transmitida pelas gerações. Ele propõe uma viagem no tempo, onde o passado não é apenas uma lembrança, mas um alicerce sólido para a construção do amanhã.
+            <br><br>
+            Neste enredo, o Garanhão busca celebrar a herança cultural, as tradições e os ensinamentos que foram legados pelos povos originários, pelos mestres do folclore e por todos que contribuíram para a rica tapeçaria da cultura amazônica. É um convite à reflexão sobre como os conhecimentos ancestrais e a conexão com a natureza podem guiar a sociedade rumo a um futuro mais sustentável, consciente e harmonioso.
+            
+        </p>
+    </div>
+</section>
+    <section id="historia" class="section active-section text-center">
+        <h2 class="mb-4">Boi Bumbá Garanhão</h2>
+        <br>
+        <br>
+        <img src="fotoboi.jpg" alt="História do Boi" class="img-fluid rounded shadow">
+        <br>
+        <br>
+        <br>
+        <p class="lead">Criado em 1991, o boi Garanhão, carinhosamente conhecido como o ‘Boi da Cidade Alta’, nasceu no coração do bairro Educandos, localizado na zona sul de Manaus. A iniciativa partiu do sonho e da paixão dos moradores da região, que desejavam formar um grupo folclórico capaz de manter viva a tradição dos bois-bumbás e fortalecer a identidade cultural da cidade.
+            <br>
+            <br>
+
+            A escolha do nome Garanhão foi proposta por Ivo Morais, em uma homenagem ao boi-bumbá Garantido, um dos principais expoentes da cultura parintinense. A cor preta do boi, por sua vez, remete ao boi-bumbá Caprichoso, criando assim uma identidade que honra os dois grandes bois do Festival de Parintins. No entanto, o Garanhão foi além e, com o passar do tempo, construiu sua própria história, desenvolvendo uma identidade singular enraizada na cultura popular de Manaus, sempre valorizando os talentos e o engajamento da comunidade do bairro Educandos.
+            <br>
+            <br>
+            
+            Para Isaac Freitas, um dos fundadores do Garanhão, o surgimento do boi foi inspirado diretamente nos bumbás de Parintins, mas com o diferencial de carregar a essência da capital amazonense. O envolvimento da comunidade foi fundamental para essa construção, pois cada morador que contribuiu com sua arte e dedicação ajudou a moldar o boi Garanhão como um verdadeiro ícone da cultura local.
+            <br>
+            <br>
+            
+            Desde sua fundação, o boi conquistou um espaço importante no Festival Folclórico do Amazonas, acumulando 14 vitórias e levando milhares de pessoas para prestigiar suas apresentações. Em seus desfiles, já mobilizou aproximadamente 1.300 participantes, entre brincantes, artistas, costureiras, batuqueiros e outros trabalhadores que, com muito esforço e dedicação, ajudaram a manter viva essa tradição. O sucesso do Garanhão reflete o orgulho e a paixão de todos que fazem parte da sua história.
+            <br>
+            <br>
+            
+            Mais do que um grupo folclórico, o boi Garanhão se tornou um símbolo de resistência e pertencimento para a comunidade de Educandos. Cada batida do tambor, cada bordado nos trajes, cada verso entoado nas toadas carrega o suor e a dedicação de um povo que luta para manter viva sua cultura. A trajetória do Garanhão é, acima de tudo, uma prova do poder da união e do amor pelo boi-bumbá, celebrando a tradição que faz do Amazonas um berço da cultura popular brasileira.
+            
+            </p>
+
+    </section>
+<section id="noticias" class="section py-5" style="background-color: #f8f9fa;">
+    <div class="container">
+        <h2 class="text-center text-success mb-4">Últimas Notícias</h2>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="card border-0 shadow-lg h-100">
+                    <img src="tema.jpg" class="card-img-top rounded-top" alt="Notícia 1">
+                    <div class="card-body bg-white text-center">
+                        <h5 class="card-title text-success">Boi Bumbá Garanhão anuncia novo tema.</h5>
+                        <p class="card-text">Legados: O futuro é Ancestral.</p>
+                    </div>
+                    <div class="card-footer text-center bg-success">
+                        <button class="btn btn-light btn-sm" onclick="showModal('Legados: O futuro é Ancestral.')">Saiba Mais</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="card border-0 shadow-lg h-100">
+                    <img src="evento.png" class="card-img-top rounded-top" alt="Notícia 2">
+                    <div class="card-body bg-white text-center">
+                        <h5 class="card-title text-success">Ensaio Show Divulgado.</h5>
+                        <p class="card-text">Novo ensaio show do garanhão já tem data divulgada no instagram do boi.</p>
+                    </div>
+                    <div class="card-footer text-center bg-success">
+                        <button class="btn btn-light btn-sm" onclick="showModal('Novo ensaio show do garanhão já tem data divulgada no instagram do boi.')">Saiba Mais</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="card border-0 shadow-lg h-100">
+                    <img src="batucada.png" class="card-img-top rounded-top" alt="Notícia 3">
+                    <div class="card-body bg-white text-center">
+                        <h5 class="card-title text-success">Aberta inscrições para novos batuqueiros.</h5>
+                        <p class="card-text">Boi Garanhão abre inscrições para novos batuqieros que queiram engressar no boi bumba.</p>
+                    </div>
+                    <div class="card-footer text-center bg-success">
+                        <button class="btn btn-light btn-sm" onclick="showModal('Boi Garanhão abre inscrições para novos batuqieros que queiram engressar no boi bumba.')">Saiba Mais</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <p id="modal-text"></p>
+    </div>
+</div>
+
+<style>
+    .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+    }
+    .modal-content {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        max-width: 90%;
+        width: 500px;
+        animation: fadeIn 0.5s ease-in-out;
+    }
+    .close {
+        float: right;
+        font-size: 28px;
+        cursor: pointer;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 768px) {
+        .modal-content {
+            width: 90%;
+            padding: 15px;
+        }
+    }
+</style>
+
+<script>
+    function showModal(text) {
+        const modal = document.getElementById('modal');
+        const modalText = document.getElementById('modal-text');
+        modalText.innerHTML = '';
+        modal.style.display = 'flex';
+        typeEffect(text, modalText);
+    }
+    
+    function closeModal() {
+        document.getElementById('modal').style.display = 'none';
+    }
+    
+    function typeEffect(text, element) {
+        let i = 0;
+        function typing() {
+            if (i < text.length) {
+                element.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typing, 50);
+            }
+        }
+        typing();
+    }
+</script>
+
+---
+
+
+
+<section id="itens" class="section py-5 bg-light">
+    <div class="container text-center">
+        <h2 class="mb-4">Nossos Itens</h2>
+        <div class="row">
+            <div class="col-md-4 col-12 mb-4">
+                <div class="card shadow-sm">
+                    <img src="pajee.jpg" class="card-img-top img-fluid rounded item-image" alt="Pajé" onclick="showItemModal('pajee.jpg', 'Pajé', 'O Pajé é o líder espiritual do boi-bumbá, responsável por rituais e invocações de proteção e prosperidade.')">
+                    <div class="card-body">
+                        <h5 class="card-title">Pajé</h5>
+                        <p class="card-text">Vitor Santos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-12 mb-4">
+                <div class="card shadow-sm">
+                    <img src="vittoria leite.jpg" class="card-img-top img-fluid rounded item-image" alt="Rainha da Batucada" onclick="showItemModal('rainhadabatucada.jpg', 'Rainha da Batucada', 'A Rainha da Batucada representa a força e o ritmo do boi, com sua dança contagiante e energia vibrante.')">
+                    <div class="card-body">
+                        <h5 class="card-title">Rainha da Batucada</h5>
+                        <p class="card-text">Vittoria Leite</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-12 mb-4">
+                <div class="card shadow-sm">
+                    <img src="rainhadofolclore.jpg" class="card-img-top img-fluid rounded item-image" alt="Rainha do Folclore" onclick="showItemModal('rainhadofolclore.jpg', 'Rainha do Folclore', 'A Rainha do Folclore personifica a beleza e a riqueza das lendas amazônicas.')">
+                    <div class="card-body">
+                        <h5 class="card-title">Rainha do Folclore</h5>
+                        <p class="card-text">Kaynara Mota.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-12 mb-4">
+                <div class="card shadow-sm">
+                    <img src="ana.jpg" class="card-img-top img-fluid rounded item-image" alt="Item 4" onclick="showItemModal('ana.jpg', 'Item 4', 'Este é o quarto item representativo do nosso boi.')">
+                    <div class="card-body">
+                        <h5 class="card-title">Sinhazinha da Fazenda</h5>
+                        <p class="card-text">Ana Alves</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-12 mb-4">
+                <div class="card shadow-sm">
+                    <img src="arlindo neto.jpg" class="card-img-top img-fluid rounded item-image" alt="Item 5" onclick="showItemModal('aaaaaa.jpg', 'Item 5', 'Este é o quinto item do boi Garanhão.')">
+                    <div class="card-body">
+                        <h5 class="card-title">Apresentador</h5>
+                        <p class="card-text">Arlindo Neto</p>
+                </div>
+                </div>
+            </div>
+             <div class="col-md-4 col-12 mb-4">
+                <div class="card shadow-sm">
+                    <img src="klinger.jpg" class="card-img-top img-fluid rounded item-image" alt="Item 6" onclick="showItemModal('pajee.jpg', 'Item 6', 'Este é o sexto item do boi Garanhão.')">
+                    <div class="card-body">
+                        <h5 class="card-title">Amo do Boi</h5>            
+                        <p class="card-text">Klinger Jr</p>
+                    </div>
+                </div>
+            </div>
+             <div class="col-md-4 col-12 mb-4">
+                <div class="card shadow-sm">
+                    <img src="kkkkkkkk.jpg" class="card-img-top img-fluid rounded item-image" alt="Item 7" onclick="showItemModal('rainhadabatucada.jpg', 'Item 7', 'Este é o sétimo item do boi Garanhão.')">
+                    <div class="card-body">
+                        <h5 class="card-title">Levantador de Toadas</h5>
+                        <p class="card-text">Anderson Figueiredo</p>
+                    </div>
+                </div>
+            </div>
+             <div class="col-md-4 col-12 mb-4">
+                <div class="card shadow-sm">
+                    <img src="tamirexzs.jpg" class="card-img-top img-fluid rounded item-image" alt="Item 8" onclick="showItemModal('rainhadofolclore.jpg', 'Item 8', 'Este é o oitavo item do boi Garanhão.')">
+                    <div class="card-body">
+                        <h5 class="card-title">Cunhã Poranga</h5>
+                        <p class="card-text">Tamiris Assis</p>
+                    </div>
+                </div>
+            </div>
+             <div class="col-md-4 col-12 mb-4">
+                <div class="card shadow-sm">
+                    <img src="batista.jpg" class="card-img-top img-fluid rounded item-image" alt="Item 9" onclick="showItemModal('ana.jpg', 'Item 9', 'Este é o nono item do boi Garanhão.')">
+                    <div class="card-body">
+                        <h5 class="card-title">Tripa do Boi</h5>
+                        <p class="card-text">Batista Silva</p>
+                    </div>
+                </div>
+            </div>
+           
+             
+        </div>
+    </div>
+
+    
+</section>
+
+<section id="contato" class="section py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Entre em Contato</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form>
+                    <div class="mb-3">
+                        <label for="nome" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="nome" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="contato" class="form-label">Número para Contato</label>
+                        <input type="tel" class="form-control" id="contato" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="mensagem" class="form-label">Mensagem</label>
+                        <textarea class="form-control" id="mensagem" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success w-100">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+</main>
+
+<script>
+    function showSection(sectionId) {
+        // Esconde todas as seções
+        let sections = document.querySelectorAll('.section');
+        sections.forEach(section => section.classList.remove('active-section'));
+
+        // Mostra a seção clicada
+        document.getElementById(sectionId).classList.add('active-section');
+    }
+
+    // Function to show the item detail modal
+    function showItemModal(imageSrc, title, description) {
+        const modal = new bootstrap.Modal(document.getElementById('itemDetailModal'));
+        document.getElementById('modalItemImage').src = imageSrc;
+        document.getElementById('itemDetailModalLabel').textContent = title;
+        document.getElementById('modalItemDescription').textContent = description;
+        modal.show();
+    }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+---
+
+<footer class="footer bg-success text-white py-4">
+    <div class="container text-center">
+        <p class="mb-2">© 2025 Boi-Bumbá Garanhão - Todos os direitos reservados.</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/boigaranhaooficial/" target="_blank" class="text-white me-3">
+                <i class="bi bi-instagram" style="font-size: 1.5rem;"></i>
+            </a>
+            
+        </div>
+    </div>
+</footer>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+<style>
+    .footer {
+        background-color: #008000; /* Verde forte */
+    }
+    .social-icons a {
+        transition: 0.3s;
+    }
+    .social-icons a:hover {
+        color: #b5f7b5 !important; /* Verde claro */
+    }
+</style>
+
+</html>
